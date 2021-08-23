@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 namespace PlayerControls
 {
@@ -14,10 +15,9 @@ namespace PlayerControls
 
         public void OnMove(InputAction.CallbackContext _context)
         {
-            Debug.Log($"Player OnMove invoked with axis: x: {_context.ReadValue<Vector2>().x} and y {_context.ReadValue<Vector2>().y}");
             transform.Translate(_context.ReadValue<Vector2>().x, 0, _context.ReadValue<Vector2>().y);
         }
-        
+
         public void OnFire(InputAction.CallbackContext _context)
         {
             Debug.Log("FIRE!");

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Gun : Weapon
 {
-    
+
     [HideInInspector] public GunData gunData;
 
     private bool isReloading;
-    
-    
+
+
     private new void Awake()
     {
         base.Awake();
@@ -38,11 +38,11 @@ public class Gun : Weapon
     {
         if (gunData.currentLoadedAmmo > 0 && !isReloading)
         {
-            // Calculate spawn angle and instantiate audio, particles and projectile
-            float angle = attackPoint.transform.eulerAngles.z;
             //soundSpawner.Play("Fire");
-            SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, angle);
-            SpawnProjectile(gunData.projectile, attackPoint.position, angle);
+
+            //SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.rotation.eulerAngles);
+            SpawnProjectile(gunData.projectile, attackPoint.position, attackPoint.rotation.eulerAngles);
+
             //CameraShake.Instance.ShakeCamera(3.5f, 0.1f);
             if (!gunData.infiniteAmmo) gunData.currentLoadedAmmo--;
         }
@@ -52,19 +52,19 @@ public class Gun : Weapon
         }
     }
 
-    private void SpawnProjectile(GameObject projectile, Vector3 position, float angle)
+    private void SpawnProjectile(GameObject projectile, Vector3 position, Vector3 direction)
     {
-        GameObject p = Instantiate(projectile, position, Quaternion.Euler(0, 0, angle));
+        GameObject p = Instantiate(projectile, position, Quaternion.Euler(direction));
         p.GetComponent<Projectile>().damage = gunData.damage;
     }
 
-    private void SpawnMuzzleFlash(GameObject muzzleFlash, Vector3 position, float angle)
+    private void SpawnMuzzleFlash(GameObject muzzleFlash, Vector3 position, Vector3 rotation)
     {
-        // Instantiate with size variation and destroy after 0.025 seconds
-        GameObject instance = Instantiate(muzzleFlash, position, Quaternion.Euler(0, 0, angle), attackPoint);
-        float size = Random.Range(0.6f, 1f);
-        instance.transform.localScale *= size;
-        Destroy(instance, 0.025f);
+
+        GameObject instance = Instantiate(muzzleFlash, position, Quaternion.Euler(rotation), attackPoint);
+        //float size = Random.Range(0.6f, 1f);
+        //instance.transform.localScale *= size;
+        Destroy(instance, 0.025f); // Destroy after 0.025 seconds
     }
 
     public void Reload()

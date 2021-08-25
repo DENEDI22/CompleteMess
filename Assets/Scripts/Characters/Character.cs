@@ -10,13 +10,13 @@ public class Character : MonoBehaviour
     public CharacterStats characterStats;
     private CharController characterController;
 
-    public int fallBoundary = -20;
-
     public event Action deathEvent;
 
 
     private void Awake()
     {
+        FindObjectOfType<Cinemachine.CinemachineTargetGroup>().AddMember(transform, 1, 1);
+
         characterStats = Instantiate(characterStats);
         characterController = gameObject.GetComponent<CharController>();
     }
@@ -24,14 +24,6 @@ public class Character : MonoBehaviour
     private void Start()
     {
         characterStats.characterController = characterController;
-    }
-
-    private void Update()
-    {
-        if (transform.position.y <= fallBoundary)
-        {
-            TakeDamage(float.MaxValue);
-        }
     }
 
     public void Die()

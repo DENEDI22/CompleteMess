@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Rigidbody))]
 public abstract class Weapon : MonoBehaviour
 {
 
@@ -15,13 +15,11 @@ public abstract class Weapon : MonoBehaviour
     [HideInInspector] public bool shouldAttack = false;
 
     [Header("Prefabs")] public Transform attackPoint;
-    
-    
+
+
     protected void Awake()
     {
         data = Instantiate(data);
-
-        gameObject.GetComponent<Collider2D>().isTrigger = true;
     }
 
     public void Attack()
@@ -48,7 +46,7 @@ public abstract class Weapon : MonoBehaviour
             timeToAttack = Time.time + 1 / data.attackRate;
         }
     }
-    
+
     private IEnumerator BurstAttack(int burstTimes, float timeBetweenShots)
     {
         for (int i = 0; i < burstTimes; i++)
@@ -59,7 +57,7 @@ public abstract class Weapon : MonoBehaviour
     }
 
     protected abstract void SingleAttack();
-    
+
 }
 
 public enum AttackMode { Single, Burst, Continuous }

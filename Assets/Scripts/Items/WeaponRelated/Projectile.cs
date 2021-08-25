@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody))]
 public class Projectile : MonoBehaviour
 {
 
-    private Rigidbody2D rb;
+    private Rigidbody rb;
 
     public float speed = 100f;
     public float lifeTime = 1;
@@ -20,19 +20,23 @@ public class Projectile : MonoBehaviour
 
     private void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     private void Start()
     {
-        rb.AddForce(transform.right * speed, ForceMode2D.Impulse);
+        rb.AddForce(transform.forward * speed, ForceMode.Impulse);
     }
 
     private void Update()
     {
         // Rotate projectile towards movement direction
-        float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
-        transform.eulerAngles = new Vector3(0, 0, angle);
+        Vector3 headingDir = rb.velocity.normalized;
+
+        if (headingDir != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(headingDir);
+        }
 
         // Destroy projectile after certain time
         if (bounces <= 0)
@@ -44,8 +48,7 @@ public class Projectile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (damaged.Contains(collision.gameObject)) return;
-        
-        /*
+
         // Inflict damage to character
         Character character = collision.gameObject.GetComponent<Character>();
         if (character != null)
@@ -53,7 +56,6 @@ public class Projectile : MonoBehaviour
             character.TakeDamage(damage);
             Destroy(gameObject);
         }
-        */
 
         if (bounces <= 0)
         {

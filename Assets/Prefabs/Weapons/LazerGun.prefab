@@ -112,8 +112,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 838962257070340210}
   - {fileID: 1562128859224722414}
+  - {fileID: 838962257070340210}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -190,7 +190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 838962256348626424}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1849590878424178273
 GameObject:
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 1562128859224722414}
   - component: {fileID: 1721544709}
   m_Layer: 0
-  m_Name: LazerGun
+  m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +307,7 @@ Transform:
   m_Children:
   - {fileID: 2439945468017692811}
   m_Father: {fileID: 838962256348626424}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1721544709
 Animator:

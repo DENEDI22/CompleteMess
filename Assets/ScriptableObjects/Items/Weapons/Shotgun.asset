@@ -18,15 +18,15 @@ MonoBehaviour:
   itemType: 0
   weaponType: 0
   damage: 25
-  attackMode: 0
-  attackRate: 1
+  attackMode: 1
+  attackRate: 0.75
   burstAmount: 4
-  burstTimeBetweenShots: 0
+  burstTimeBetweenShots: 0.1
   infiniteAmmo: 0
   infiniteReload: 0
-  maxLoadedAmmo: 3
-  maxStoredAmmo: 9
-  reloadTime: 1
+  maxLoadedAmmo: 6
+  maxStoredAmmo: 12
+  reloadTime: 1.25
   currentLoadedAmmo: 0
   currentStoredAmmo: 0
   projectile: {fileID: 7349376330728473227, guid: 299da816552bb5c44ae26cadd0c8e0ae, type: 3}

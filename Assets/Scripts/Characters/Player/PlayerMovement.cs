@@ -8,6 +8,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    [SerializeField]
+    float rotationSmoothSpeed = 1f;
+
     CharController player;
     [SerializeField]
     PlayerInput playerInput;
@@ -26,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.rotation = Quaternion.Euler(lookDir);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(lookDir), rotationSmoothSpeed * Time.fixedDeltaTime);
         player.Move(new Vector3(moveDir.x, 0, moveDir.y), player.speed);
     }
 

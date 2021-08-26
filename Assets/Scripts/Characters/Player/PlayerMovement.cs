@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     CharController player;
+    [SerializeField]
     PlayerInput playerInput;
 
 
@@ -36,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnAim(InputAction.CallbackContext context)
     {
-
         if (playerInput.currentControlScheme == "Keyboard&Mouse")
         {
             Vector3 position = Camera.main.WorldToScreenPoint(transform.position);

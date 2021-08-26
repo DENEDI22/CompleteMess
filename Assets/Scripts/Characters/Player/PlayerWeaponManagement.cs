@@ -92,20 +92,6 @@ public class PlayerWeaponManagement : EquipmentManagement
         }
     }
 
-
-    public void OnAim(InputAction.CallbackContext context)
-    {
-        // Button Pressed
-        if (context.started)
-        {
-            Debug.Log("AIM");
-        }
-        if (context.canceled)
-        {
-            Debug.Log("UNAIM");
-        }
-    }
-
     public void OnReload(InputAction.CallbackContext context)
     {
         // Button Pressed

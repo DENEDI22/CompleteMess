@@ -27,7 +27,7 @@ public class EquipmentManagement : MonoBehaviour
         currentEquippedWeapon = weapon;
     }
 
-    public void DropWeapon(Weapon weapon, float force = 3f)
+    public void DropWeapon(Weapon weapon, float force = 5f)
     {
         if(weapon.transform.parent != null) weapon.transform.parent = null;
 
@@ -41,7 +41,7 @@ public class EquipmentManagement : MonoBehaviour
         currentEquippedWeapon = null;
     }
 
-    public void DropWeapon(Weapon weapon, Vector3 direction, float force = 3f)
+    public void DropWeapon(Weapon weapon, Vector3 direction, float force = 5f)
     {
         weapon.transform.parent = null;
 

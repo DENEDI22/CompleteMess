@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.InputSystem;
 using UnityEngine;
 
@@ -20,65 +21,103 @@ public class PlayerWeaponManagement : EquipmentManagement
         }
     }
 
-    public void OnPickup(InputAction.CallbackContext _context)
+    private void FixedUpdate()
     {
-        Collider[] hits = Physics.OverlapSphere(transform.position, pickupRange);
-
-        Weapon weaponToPickup;
-
-        foreach (Collider hit in hits)
+        if (weaponEquipped)
         {
-            weaponToPickup = hit.gameObject.GetComponent<Weapon>();
+            currentEquippedWeapon.Attack();
+        }
+    }
 
-            if (weaponToPickup != null)
+    public void OnPickup(InputAction.CallbackContext context)
+    {
+        // Button Pressed
+        if (context.started)
+        {
+            Collider[] hits = Physics.OverlapSphere(transform.position, pickupRange);
+
+            Weapon weaponToPickup = null;
+            Weapon weapon;
+            float closest = pickupRange;
+
+            foreach (Collider hit in hits)
             {
-                if (weaponEquipped)
-                {
-                    SwapWeapons(currentEquippedWeapon, weaponToPickup);
-                }
-                else
-                {
-                    PickupWeapon(weaponToPickup);
-                }
+                weapon = hit.gameObject.GetComponent<Weapon>();
 
-                break;
+                if (weapon != null && weapon.transform.parent == null)
+                {
+                    float dist = Vector3.Distance(transform.position, weapon.transform.position);
+                    if (dist < closest)
+                    {
+                        weaponToPickup = weapon;
+                        closest = dist;
+                    }
+                }
+            }
+
+            if (weaponToPickup == null) return;
+
+            if (weaponEquipped)
+            {
+                SwapWeapons(currentEquippedWeapon, weaponToPickup);
+            }
+            else
+            {
+                PickupWeapon(weaponToPickup);
             }
         }
     }
 
-    public void OnDrop(InputAction.CallbackContext _context)
+    public void OnDrop(InputAction.CallbackContext context)
     {
-        if (weaponEquipped) DropWeapon(currentEquippedWeapon);
+        // Button Pressed
+        if (context.started)
+        {
+            if (weaponEquipped) DropWeapon(currentEquippedWeapon);
+        }
     }
 
-    public void OnFire(InputAction.CallbackContext _context)
+    public void OnFire(InputAction.CallbackContext context)
     {
-        Debug.Log("FIRE");
-
         // Button Pressed
-        if (weaponEquipped) currentEquippedWeapon.shouldAttack = true;
-
-        // Button Hold
-        if (weaponEquipped) currentEquippedWeapon.Attack();
+        if (context.started)
+        {
+            if (weaponEquipped) currentEquippedWeapon.shouldAttack = true;
+        }
 
         // Button Released
-        if (weaponEquipped) currentEquippedWeapon.shouldAttack = false;
-
+        if (context.canceled)
+        {
+            if (weaponEquipped) currentEquippedWeapon.shouldAttack = false;
+        }
     }
 
-    public void OnAim(InputAction.CallbackContext _context)
-    {
-        Debug.Log("AIM");
-    }
 
-    public void OnReload(InputAction.CallbackContext _context)
+    public void OnAim(InputAction.CallbackContext context)
     {
         // Button Pressed
-        if (weaponEquipped)
+        if (context.started)
         {
-            if (currentEquippedWeapon.data.weaponType == WeaponType.Gun)
+            Debug.Log("AIM");
+        }
+        if (context.canceled)
+        {
+            Debug.Log("UNAIM");
+        }
+    }
+
+    public void OnReload(InputAction.CallbackContext context)
+    {
+        // Button Pressed
+        if (context.started)
+        {
+            if (weaponEquipped)
             {
-                ((Gun)currentEquippedWeapon).Reload();
+                if (currentEquippedWeapon.data.weaponType == WeaponType.Gun)
+                {
+                    Debug.Log("Reloading");
+                    ((Gun)currentEquippedWeapon).Reload();
+                }
             }
         }
     }

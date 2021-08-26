@@ -19,7 +19,7 @@ MonoBehaviour:
   weaponType: 0
   damage: 25
   attackMode: 0
-  attackRate: 1
+  attackRate: 12
   burstAmount: 2
   burstTimeBetweenShots: 0.1
   infiniteAmmo: 0

@@ -15,11 +15,11 @@
                 },
                 {
                     "name": "Aim",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "f622fc04-1828-4193-b8d8-1e21c04a9552",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "Fire",
@@ -27,7 +27,7 @@
                     "id": "886fc7a4-7f41-4a80-8ce7-222b783ddee6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "Pickup",
@@ -35,7 +35,7 @@
                     "id": "1865bbbd-8f28-4ad4-a91a-5d4f2b11f5ce",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 },
                 {
                     "name": "Drop",
@@ -43,7 +43,7 @@
                     "id": "5ed09cc7-acd5-42d7-9b06-8b7f4b18a640",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -181,8 +181,8 @@
                 },
                 {
                     "name": "",
-                    "id": "3d37afe9-1a98-4fcb-b4db-a9951eb1742e",
-                    "path": "<Mouse>/rightButton",
+                    "id": "8c8e490b-c610-4785-884f-f04217b23ca4",
+                    "path": "<Pointer>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -197,17 +197,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Aim",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8c8e490b-c610-4785-884f-f04217b23ca4",
-                    "path": "<Pointer>/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse;Touch",
                     "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false

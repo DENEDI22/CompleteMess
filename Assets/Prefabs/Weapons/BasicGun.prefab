@@ -111,6 +111,25 @@ Transform:
   m_Father: {fileID: 4994553027615051769}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &728655475
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230207850942124170}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e3b9365590d7b74abec70b236b4e0a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7536688671033421275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144,11 +163,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e2b268a6a1e8384f86e1062014dde01, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.49999925
+      value: 0.4999993
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e2b268a6a1e8384f86e1062014dde01, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.49999928
+      value: 0.4999993
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e2b268a6a1e8384f86e1062014dde01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -168,6 +187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e2b268a6a1e8384f86e1062014dde01, type: 3}
+--- !u!1 &7230207850942124170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e2b268a6a1e8384f86e1062014dde01, type: 3}
+  m_PrefabInstance: {fileID: 7536688671033421275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8006567906837334576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1e2b268a6a1e8384f86e1062014dde01, type: 3}

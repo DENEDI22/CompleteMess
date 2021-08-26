@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8428084515573535344}
   - component: {fileID: 8428084515573535349}
   m_Layer: 0
-  m_Name: EquipPoint
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

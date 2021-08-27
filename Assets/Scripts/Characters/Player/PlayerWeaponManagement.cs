@@ -23,7 +23,7 @@ public class PlayerWeaponManagement : EquipmentManagement
 
     private void FixedUpdate()
     {
-        if (weaponEquipped)
+        if (WeaponEquipped)
         {
             currentEquippedWeapon.Attack();
         }
@@ -57,7 +57,7 @@ public class PlayerWeaponManagement : EquipmentManagement
 
             if (weaponToPickup == null) return;
 
-            if (weaponEquipped)
+            if (WeaponEquipped)
             {
                 SwapWeapons(currentEquippedWeapon, weaponToPickup);
             }
@@ -73,7 +73,7 @@ public class PlayerWeaponManagement : EquipmentManagement
         // Button Pressed
         if (context.started)
         {
-            if (weaponEquipped) DropWeapon(currentEquippedWeapon);
+            if (WeaponEquipped) DropWeapon(currentEquippedWeapon);
         }
     }
 
@@ -82,13 +82,13 @@ public class PlayerWeaponManagement : EquipmentManagement
         // Button Pressed
         if (context.started)
         {
-            if (weaponEquipped) currentEquippedWeapon.shouldAttack = true;
+            if (WeaponEquipped) currentEquippedWeapon.shouldAttack = true;
         }
 
         // Button Released
         if (context.canceled)
         {
-            if (weaponEquipped) currentEquippedWeapon.shouldAttack = false;
+            if (WeaponEquipped) currentEquippedWeapon.shouldAttack = false;
         }
     }
 
@@ -97,7 +97,7 @@ public class PlayerWeaponManagement : EquipmentManagement
         // Button Pressed
         if (context.started)
         {
-            if (weaponEquipped)
+            if (WeaponEquipped)
             {
                 if (currentEquippedWeapon.data.weaponType == WeaponType.Gun)
                 {

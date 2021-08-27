@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 8428084515573535340}
   - component: {fileID: 8428084515573535351}
   - component: {fileID: 8428084515573535345}
+  - component: {fileID: 8428084515573535344}
   - component: {fileID: 8428084515573535346}
   - component: {fileID: 8428084515573535347}
   - component: {fileID: 8428084515573535350}
-  - component: {fileID: 8428084515573535344}
   - component: {fileID: 8428084515573535349}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8428084515573535345
 Rigidbody:
@@ -65,49 +65,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 80
   m_CollisionDetection: 1
---- !u!114 &8428084515573535346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8428084515573535341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e85cbc352774149b08a1f2b7f07eef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
---- !u!114 &8428084515573535347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8428084515573535341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32730be18e718a846ad087abaeea6914, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterStats: {fileID: 11400000, guid: 06c3773f7b4d1934f9ff2a91120dbe18, type: 2}
---- !u!114 &8428084515573535350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8428084515573535341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1bbff78627ab024fa0827dd165e96bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSmoothSpeed: 1000
-  playerInput: {fileID: 8428084515573535344}
 --- !u!114 &8428084515573535344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +218,46 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8428084515573535346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428084515573535341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e85cbc352774149b08a1f2b7f07eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &8428084515573535347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428084515573535341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32730be18e718a846ad087abaeea6914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterStats: {fileID: 11400000, guid: 06c3773f7b4d1934f9ff2a91120dbe18, type: 2}
+--- !u!114 &8428084515573535350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428084515573535341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1bbff78627ab024fa0827dd165e96bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSmoothSpeed: 1000
+  playerInput: {fileID: 8428084515573535344}
 --- !u!114 &8428084515573535349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentPoint: {fileID: 8428084516247380277}
   currentEquippedWeapon: {fileID: 0}
-  weaponEquipped: 0
   pickupRange: 5
 --- !u!1 &8428084516247380278
 GameObject:
@@ -283,7 +282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8428084516247380277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EquipPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,6 +377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Icosphere
       objectReference: {fileID: 0}
+    - target: {fileID: -5117700066308340382, guid: af627cc38722b374b80a84d1cf528cd5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -4025470130324596155, guid: af627cc38722b374b80a84d1cf528cd5, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -410,9 +413,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torus
       objectReference: {fileID: 0}
+    - target: {fileID: -391268320553695201, guid: af627cc38722b374b80a84d1cf528cd5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: af627cc38722b374b80a84d1cf528cd5, type: 3}
       propertyPath: m_Name
       value: Graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af627cc38722b374b80a84d1cf528cd5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af627cc38722b374b80a84d1cf528cd5, type: 3}

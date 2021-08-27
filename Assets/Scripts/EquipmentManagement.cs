@@ -5,13 +5,10 @@ using UnityEngine;
 public class EquipmentManagement : MonoBehaviour
 {
 
-
     public Transform equipmentPoint;
 
-    [HideInInspector]
-    public Weapon currentEquippedWeapon;
-    [HideInInspector]
-    public bool weaponEquipped = false;
+    [HideInInspector] public Weapon currentEquippedWeapon;
+    [HideInInspector] public bool WeaponEquipped => currentEquippedWeapon != null;
 
 
     public void PickupWeapon(Weapon weapon)
@@ -24,7 +21,6 @@ public class EquipmentManagement : MonoBehaviour
         weapon.GetComponent<Collider>().isTrigger = true;
         weapon.GetComponent<Rigidbody>().isKinematic = true;
 
-        weaponEquipped = true;
         currentEquippedWeapon = weapon;
     }
 
@@ -38,7 +34,6 @@ public class EquipmentManagement : MonoBehaviour
         rb.isKinematic = false;
         rb.AddForce((equipmentPoint.forward + transform.up) * force, ForceMode.Impulse);
 
-        weaponEquipped = false;
         currentEquippedWeapon = null;
     }
 
@@ -52,7 +47,6 @@ public class EquipmentManagement : MonoBehaviour
         rb.isKinematic = false;
         rb.AddForce(direction * force, ForceMode.Impulse);
 
-        weaponEquipped = false;
         currentEquippedWeapon = null;
     }
 

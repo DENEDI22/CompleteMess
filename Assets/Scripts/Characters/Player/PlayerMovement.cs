@@ -12,9 +12,7 @@ public class PlayerMovement : MonoBehaviour
     float rotationSmoothSpeed = 1f;
 
     CharController player;
-    [SerializeField]
-    PlayerInput playerInput;
-
+    [SerializeField] PlayerInput playerInput;
 
     Vector2 moveDir;
     Vector3 lookDir;
@@ -40,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnAim(InputAction.CallbackContext context)
     {
+        if (playerInput.currentControlScheme == null) return;
+
+        // Control Scheme for controller: "Gamepad"
+
         if (playerInput.currentControlScheme == "Keyboard&Mouse")
         {
             Vector3 position = Camera.main.WorldToScreenPoint(transform.position);

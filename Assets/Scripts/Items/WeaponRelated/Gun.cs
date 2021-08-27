@@ -43,7 +43,7 @@ public class Gun : Weapon
             //SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.rotation.eulerAngles);
             SpawnProjectile(gunData.projectile, attackPoint.position, attackPoint.rotation.eulerAngles);
 
-            //CameraShake.Instance.ShakeCamera(3.5f, 0.1f);
+            CameraShake.Instance.ShakeCamera(data.intensity, data.duration);
             if (!gunData.infiniteAmmo) gunData.currentLoadedAmmo--;
         }
         else

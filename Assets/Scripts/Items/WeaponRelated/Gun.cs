@@ -66,7 +66,7 @@ public class Gun : Weapon
     private void SpawnMuzzleFlash(GameObject muzzleFlash, Vector3 position, Vector3 rotation)
     {
         GameObject instance = Instantiate(muzzleFlash, position, Quaternion.Euler(rotation), attackPoint);
-        float size = Random.Range(0.6f, 1f);
+        float size = Random.Range(0.75f, 1f);
         instance.transform.localScale *= size;
         Destroy(instance, 0.025f); // Destroy after 0.025 seconds
     }

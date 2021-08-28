@@ -36,8 +36,8 @@ namespace SoundSystem
             }
             return null;
         }
-        
-        public void PlaySFX([NotNull]AudioClip _audioClip, AudioMixerGroup _mixer)
+
+        public void PlaySFX([NotNull] AudioClip _audioClip, AudioMixerGroup _mixer)
         {
             AudioSource currentSource = GetPooledObject();
             currentSource.clip = _audioClip;

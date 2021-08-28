@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenuParticles : MonoBehaviour
+public class ParticleSpawner : MonoBehaviour
 {
 
     [SerializeField]

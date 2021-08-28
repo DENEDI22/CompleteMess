@@ -15,7 +15,7 @@ public class WeaponSpawner : MonoBehaviour
         {
             if (transform.childCount == 0)
             {
-                Instantiate(allWeapons[Random.Range(0, allWeapons.Length)], transform);
+                Instantiate(allWeapons[Random.Range(0, allWeapons.Length)], transform.position, Quaternion.identity);
             }
             yield return new WaitForSeconds(weaponSpawnCoolDown);
         }

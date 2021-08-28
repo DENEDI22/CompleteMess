@@ -44,6 +44,7 @@ public abstract class Weapon : MonoBehaviour
 
                 case AttackMode.Laser:
                     SingleAttack();
+                    shouldAttack = false;
                     break;
             }
 

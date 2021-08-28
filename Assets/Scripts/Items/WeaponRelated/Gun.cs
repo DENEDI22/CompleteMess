@@ -49,7 +49,12 @@ public class Gun : Weapon
             Vector3 deviation = Random.insideUnitCircle.normalized * gunData.spread;
             Vector3 bulletDirection = attackPoint.transform.eulerAngles + deviation;
 
-            SpawnProjectile(gunData.projectile, attackPoint.position, bulletDirection);
+            GameObject projectile = SpawnProjectile(gunData.projectile, attackPoint.position, bulletDirection);
+            if (gunData.attackMode == AttackMode.Laser)
+            {
+                projectile.transform.parent = attackPoint;
+            }
+
             if (gunData.muzzleFlash != null) SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.transform.eulerAngles);
 
             CameraShake.Instance.ShakeCamera(data.intensity, data.duration);
@@ -62,18 +67,12 @@ public class Gun : Weapon
         }
     }
 
-    private void SpawnProjectile(GameObject projectile, Vector3 position, Vector3 direction)
+    private GameObject SpawnProjectile(GameObject projectile, Vector3 position, Vector3 direction)
     {
         GameObject p = Instantiate(projectile, position, Quaternion.Euler(direction));
         p.GetComponent<Projectile>().damage = gunData.damage;
+        return p;
     }
-
-    /*
-    private void ShootLaser()
-    {
-        LaserBeam beam = new LaserBeam(gameObject.transform.position, gameObject.transform.forward, material);
-    }
-    */
 
     private void SpawnMuzzleFlash(GameObject muzzleFlash, Vector3 position, Vector3 rotation)
     {

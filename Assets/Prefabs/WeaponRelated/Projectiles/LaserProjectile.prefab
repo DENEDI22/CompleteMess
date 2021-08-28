@@ -43,7 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09cfcb06b002a5142b547d660f016cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 2
+  lifeTime: 2.15
+  hitParticle: {fileID: 0}
+  damage: 0
   settings:
     length: 30
     startWidth: 0.1

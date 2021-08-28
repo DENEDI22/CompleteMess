@@ -24,7 +24,7 @@ MonoBehaviour:
   intensity: 5
   duration: 0.1
   sounds: []
-  infiniteAmmo: 1
+  infiniteAmmo: 0
   infiniteReload: 0
   maxLoadedAmmo: 6
   maxStoredAmmo: 12

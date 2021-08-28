@@ -11,16 +11,6 @@ public class PlayerWeaponManagement : EquipmentManagement
     public float pickupRange;
 
 
-    private void Start()
-    {
-        Weapon startWeapon = equipmentPoint.GetComponentInChildren<Weapon>();
-
-        if (startWeapon != null)
-        {
-            PickupWeapon(startWeapon);
-        }
-    }
-
     private void FixedUpdate()
     {
         if (WeaponEquipped)
@@ -31,10 +21,15 @@ public class PlayerWeaponManagement : EquipmentManagement
 
     public void OnPickup(InputAction.CallbackContext context)
     {
+        if (!gameObject.scene.IsValid()) return;
+
         // Button Pressed
         if (context.started)
         {
             Collider[] hits = Physics.OverlapSphere(transform.position, pickupRange);
+
+
+
 
             Weapon weaponToPickup = null;
             Weapon weapon;
@@ -65,11 +60,14 @@ public class PlayerWeaponManagement : EquipmentManagement
             {
                 PickupWeapon(weaponToPickup);
             }
+
         }
     }
 
     public void OnDrop(InputAction.CallbackContext context)
     {
+        if (!gameObject.scene.IsValid()) return;
+
         // Button Pressed
         if (context.started)
         {
@@ -79,6 +77,8 @@ public class PlayerWeaponManagement : EquipmentManagement
 
     public void OnFire(InputAction.CallbackContext context)
     {
+        if (!gameObject.scene.IsValid()) return;
+
         // Button Pressed
         if (context.started)
         {
@@ -94,6 +94,8 @@ public class PlayerWeaponManagement : EquipmentManagement
 
     public void OnReload(InputAction.CallbackContext context)
     {
+        if (!gameObject.scene.IsValid()) return;
+
         // Button Pressed
         if (context.started)
         {

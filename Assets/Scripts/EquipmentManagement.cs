@@ -7,14 +7,14 @@ public class EquipmentManagement : MonoBehaviour
 
     public Transform equipmentPoint;
 
-    [HideInInspector] public Weapon currentEquippedWeapon;
-    [HideInInspector] public bool WeaponEquipped => currentEquippedWeapon != null;
+    [HideInInspector] public Weapon currentEquippedWeapon = null;
+    public bool WeaponEquipped => currentEquippedWeapon != null;
 
 
     public void PickupWeapon(Weapon weapon)
     {
-        // weapon.transform.parent = equipmentPoint;
-        weapon.transform.parent = equipmentPoint.transform;
+        weapon.transform.parent = equipmentPoint;
+        //weapon.transform.parent = equipmentPoint.transform;
         weapon.transform.localPosition = Vector3.zero;
         weapon.transform.localRotation = Quaternion.Euler(Vector3.zero);
         weapon.transform.localScale = Vector3.one;
@@ -26,7 +26,7 @@ public class EquipmentManagement : MonoBehaviour
 
     public void DropWeapon(Weapon weapon, float force = 5f)
     {
-        if (weapon.transform.parent != null) weapon.transform.parent = null;
+        weapon.transform.parent = null;
 
         // Add force (make a better implementation of this later or sumthing)
         weapon.GetComponent<Collider>().isTrigger = false;

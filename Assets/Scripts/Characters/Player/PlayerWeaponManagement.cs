@@ -101,7 +101,6 @@ public class PlayerWeaponManagement : EquipmentManagement
             {
                 if (currentEquippedWeapon.data.weaponType == WeaponType.Gun)
                 {
-                    Debug.Log("Reloading");
                     ((Gun)currentEquippedWeapon).Reload();
                 }
             }

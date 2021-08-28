@@ -15,6 +15,9 @@ public class GunData : WeaponData
     [HideInInspector] public int currentLoadedAmmo;
     [HideInInspector] public int currentStoredAmmo;
 
+    [Header("Bullet Spread Settings")]
+    [Min(0)] public float spread;
+
     [Header("Prefabs")]
     public GameObject projectile;
     public GameObject muzzleFlash;

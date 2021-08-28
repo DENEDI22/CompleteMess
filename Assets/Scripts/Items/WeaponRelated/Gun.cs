@@ -38,17 +38,21 @@ public class Gun : Weapon
     {
         if (gunData.currentLoadedAmmo > 0 && !isReloading)
         {
-            //soundSpawner.Play("Fire");
+            //AudioManager.instance.Play(gunData.sounds);
 
-            //SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.rotation.eulerAngles);
-            SpawnProjectile(gunData.projectile, attackPoint.position, attackPoint.rotation.eulerAngles);
+            // Bullet Spread
+            Vector3 deviation = Random.insideUnitCircle.normalized * gunData.spread;
+            Vector3 bulletDirection = attackPoint.transform.eulerAngles + deviation;
+
+            SpawnProjectile(gunData.projectile, attackPoint.position, bulletDirection);
+            //SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.rotation.eulerAngles
 
             CameraShake.Instance.ShakeCamera(data.intensity, data.duration);
             if (!gunData.infiniteAmmo) gunData.currentLoadedAmmo--;
         }
         else
         {
-            //soundSpawner.Play("Empty");
+            //AudioManager.instance.Play("Empty");
         }
     }
 

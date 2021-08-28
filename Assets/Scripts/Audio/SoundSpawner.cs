@@ -45,6 +45,21 @@ public class SoundSpawner : MonoBehaviour
         }
     }
 
+    public void Play(SoundContainer sound)
+    {
+        foreach (Sound s in sound.clips)
+        {
+            if (s.source != null)
+            {
+                s.source.Play();
+            }
+            else
+            {
+                Debug.LogWarning("Sound " + ('"' + s.name + '"') + " does not have a source!");
+            }
+        }
+    }
+
     public void PlayAtPoint(string name, Vector3 position)
     {
         SoundContainer sound = GetSoundContainer(name);

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ded688d14cdda408743b47a7bb112e, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  id: 1
   name: Shotgun
   description: Description.
   itemType: 0
@@ -20,14 +19,18 @@ MonoBehaviour:
   damage: 25
   attackMode: 1
   attackRate: 0.75
-  burstAmount: 4
-  burstTimeBetweenShots: 0.1
-  infiniteAmmo: 0
+  burstAmount: 3
+  burstTimeBetweenShots: 0.025
+  intensity: 5
+  duration: 0.1
+  sounds: []
+  infiniteAmmo: 1
   infiniteReload: 0
   maxLoadedAmmo: 6
   maxStoredAmmo: 12
   reloadTime: 1.25
   currentLoadedAmmo: 0
   currentStoredAmmo: 0
+  spread: 5
   projectile: {fileID: 7349376330728473227, guid: 299da816552bb5c44ae26cadd0c8e0ae, type: 3}
   muzzleFlash: {fileID: 0}

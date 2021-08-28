@@ -5,7 +5,6 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
 
-    public int id;
     public new string name;
     public string description;
 

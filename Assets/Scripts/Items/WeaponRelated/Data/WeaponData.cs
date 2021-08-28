@@ -18,6 +18,9 @@ public class WeaponData : ItemData
     public float intensity = 3.5f;
     public float duration = 0.1f;
 
+    [Header("Sound Settings")]
+    public SoundContainer[] sounds;
+
     private void Awake()
     {
         itemType = ItemType.Weapon;

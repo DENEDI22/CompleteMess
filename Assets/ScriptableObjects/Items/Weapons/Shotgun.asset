@@ -20,7 +20,7 @@ MonoBehaviour:
   attackMode: 1
   attackRate: 0.75
   burstAmount: 3
-  burstTimeBetweenShots: 0.025
+  burstTimeBetweenShots: 0
   intensity: 10
   duration: 0.1
   sounds: []

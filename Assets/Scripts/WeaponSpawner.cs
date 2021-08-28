@@ -19,7 +19,6 @@ public class WeaponSpawner : MonoBehaviour
             }
             yield return new WaitForSeconds(weaponSpawnCoolDown);
         }
-        yield break;
     }
 
     private void Start()

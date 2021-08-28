@@ -26,8 +26,6 @@ public class PlayerWeaponManagement : EquipmentManagement
         // Button Pressed
         if (context.started)
         {
-            
-            Debug.Log("PickUp");
             Collider[] hits = Physics.OverlapSphere(transform.position, pickupRange);
 
             Weapon weaponToPickup = null;

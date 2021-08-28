@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (damaged.Contains(collision.gameObject)) return;
+        if (collision.gameObject.GetComponent<Projectile>() != null || damaged.Contains(collision.gameObject)) return;
 
         // Inflict damage to character
         Character character = collision.gameObject.GetComponent<Character>();

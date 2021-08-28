@@ -28,9 +28,6 @@ public class PlayerWeaponManagement : EquipmentManagement
         {
             Collider[] hits = Physics.OverlapSphere(transform.position, pickupRange);
 
-
-
-
             Weapon weaponToPickup = null;
             Weapon weapon;
             float closest = pickupRange;
@@ -60,7 +57,6 @@ public class PlayerWeaponManagement : EquipmentManagement
             {
                 PickupWeapon(weaponToPickup);
             }
-
         }
     }
 
@@ -99,12 +95,9 @@ public class PlayerWeaponManagement : EquipmentManagement
         // Button Pressed
         if (context.started)
         {
-            if (WeaponEquipped)
+            if (WeaponEquipped && currentEquippedWeapon.data.weaponType == WeaponType.Gun)
             {
-                if (currentEquippedWeapon.data.weaponType == WeaponType.Gun)
-                {
-                    ((Gun)currentEquippedWeapon).Reload();
-                }
+                ((Gun)currentEquippedWeapon).Reload();
             }
         }
     }

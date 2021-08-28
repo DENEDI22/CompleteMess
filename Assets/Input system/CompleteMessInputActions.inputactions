@@ -30,6 +30,14 @@
                     "interactions": "Press(behavior=2)"
                 },
                 {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "20c58685-472c-4c0d-ad62-e03a138f3bdd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
                     "name": "Pickup",
                     "type": "Button",
                     "id": "1865bbbd-8f28-4ad4-a91a-5d4f2b11f5ce",
@@ -41,14 +49,6 @@
                     "name": "Drop",
                     "type": "Button",
                     "id": "5ed09cc7-acd5-42d7-9b06-8b7f4b18a640",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "Reload",
-                    "type": "Button",
-                    "id": "20c58685-472c-4c0d-ad62-e03a138f3bdd",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
@@ -147,7 +147,7 @@
                     "name": "",
                     "id": "70ea6192-df45-40cb-8fec-1dd25ac80d6c",
                     "path": "<Keyboard>/f",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Pickup",

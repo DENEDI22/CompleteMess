@@ -74,7 +74,7 @@ public class Projectile : MonoBehaviour
 
     void SpawnParticle(GameObject hitParticle, Vector3 position, Vector3 direction)
     {
-        Instantiate(hitParticle, position, Quaternion.FromToRotation(transform.up, direction));
+        Instantiate(hitParticle, position, Quaternion.FromToRotation(hitParticle.transform.forward, direction));
     }
 
 }

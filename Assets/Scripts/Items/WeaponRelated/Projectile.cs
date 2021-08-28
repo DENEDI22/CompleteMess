@@ -7,13 +7,12 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    public float lifeTime = 1;
+    public float lifeTime = 1f;
     public int bounces = 0;
     public GameObject hitParticle;
 
     [HideInInspector]
     public float damage = 0f;
-    //private HashSet<GameObject> damaged = new HashSet<GameObject>();
 
 
     protected void SpawnParticle(GameObject hitParticle, Vector3 position, Vector3 direction)

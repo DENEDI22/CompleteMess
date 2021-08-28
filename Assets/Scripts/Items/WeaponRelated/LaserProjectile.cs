@@ -15,7 +15,7 @@ public class LaserProjectile : Projectile
     private int currentBounces = 0;
     [HideInInspector]
     public float damageRate;
-    private float timeToAttack = 0;
+    private float timeToAttack = 0f;
 
     private LineRenderer laser;
     private List<Vector3> laserIndicies = new List<Vector3>();
@@ -91,7 +91,7 @@ public class LaserProjectile : Projectile
                 {
                     hitCharacter.TakeDamage(damage);
 
-                    timeToAttack = Time.time + 1 / damageRate;
+                    timeToAttack = Time.time + 1f / damageRate;
                 }
             }
 

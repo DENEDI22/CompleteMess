@@ -45,9 +45,10 @@ public class Gun : Weapon
             Vector3 bulletDirection = attackPoint.transform.eulerAngles + deviation;
 
             SpawnProjectile(gunData.projectile, attackPoint.position, bulletDirection);
-            //SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.rotation.eulerAngles
+            SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.transform.eulerAngles);
 
             CameraShake.Instance.ShakeCamera(data.intensity, data.duration);
+
             if (!gunData.infiniteAmmo) gunData.currentLoadedAmmo--;
         }
         else
@@ -64,10 +65,9 @@ public class Gun : Weapon
 
     private void SpawnMuzzleFlash(GameObject muzzleFlash, Vector3 position, Vector3 rotation)
     {
-
         GameObject instance = Instantiate(muzzleFlash, position, Quaternion.Euler(rotation), attackPoint);
-        //float size = Random.Range(0.6f, 1f);
-        //instance.transform.localScale *= size;
+        float size = Random.Range(0.6f, 1f);
+        instance.transform.localScale *= size;
         Destroy(instance, 0.025f); // Destroy after 0.025 seconds
     }
 

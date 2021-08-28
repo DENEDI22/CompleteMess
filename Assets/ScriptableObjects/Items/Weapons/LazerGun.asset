@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ded688d14cdda408743b47a7bb112e, type: 3}
   m_Name: LazerGun
   m_EditorClassIdentifier: 
-  id: 1
   name: LazerGun
   description: Description.
   itemType: 0
@@ -22,6 +21,9 @@ MonoBehaviour:
   attackRate: 12
   burstAmount: 2
   burstTimeBetweenShots: 0.1
+  intensity: 3.5
+  duration: 0.1
+  sounds: []
   infiniteAmmo: 0
   infiniteReload: 0
   maxLoadedAmmo: 45
@@ -29,5 +31,6 @@ MonoBehaviour:
   reloadTime: 1
   currentLoadedAmmo: 0
   currentStoredAmmo: 0
+  spread: 0
   projectile: {fileID: 7349376330728473227, guid: 299da816552bb5c44ae26cadd0c8e0ae, type: 3}
-  muzzleFlash: {fileID: 0}
+  muzzleFlash: {fileID: 3710675251221292456, guid: 1c13738fe91191e4b9b15463c515ab15, type: 3}

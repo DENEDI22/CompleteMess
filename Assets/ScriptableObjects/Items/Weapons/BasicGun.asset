@@ -23,6 +23,7 @@ MonoBehaviour:
   burstTimeBetweenShots: 0.1
   intensity: 3.5
   duration: 0.1
+  sounds: []
   infiniteAmmo: 0
   infiniteReload: 0
   maxLoadedAmmo: 30
@@ -32,4 +33,4 @@ MonoBehaviour:
   currentStoredAmmo: 0
   spread: 0
   projectile: {fileID: 7349376330728473227, guid: 299da816552bb5c44ae26cadd0c8e0ae, type: 3}
-  muzzleFlash: {fileID: 0}
+  muzzleFlash: {fileID: 3710675251221292456, guid: 1c13738fe91191e4b9b15463c515ab15, type: 3}

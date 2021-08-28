@@ -45,7 +45,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (damaged.Contains(collision.gameObject)) return;
 
@@ -60,9 +60,8 @@ public class Projectile : MonoBehaviour
         if (bounces <= 0)
         {
             // Spawn hit particle in alignment with normal
-            ContactPoint2D contact = collision.contacts[0];
-            float angle = Mathf.Atan2(contact.normal.y, contact.normal.x) * Mathf.Rad2Deg - 90;
-            if (hitParticle != null) SpawnParticle(hitParticle, contact.point, angle);
+            ContactPoint contact = collision.contacts[0];
+            if (hitParticle != null) SpawnParticle(hitParticle, contact.point, contact.normal);
             Destroy(gameObject);
         }
         else
@@ -73,9 +72,9 @@ public class Projectile : MonoBehaviour
         damaged.Add(collision.gameObject);
     }
 
-    void SpawnParticle(GameObject hitParticle, Vector3 position, float angle)
+    void SpawnParticle(GameObject hitParticle, Vector3 position, Vector3 direction)
     {
-        Instantiate(hitParticle, position, Quaternion.Euler(0, 0, angle));
+        Instantiate(hitParticle, position, Quaternion.FromToRotation(transform.up, direction));
     }
 
 }

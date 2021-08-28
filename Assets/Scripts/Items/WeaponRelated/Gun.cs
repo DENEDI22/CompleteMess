@@ -42,9 +42,7 @@ public class Gun : Weapon
 
             //SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.rotation.eulerAngles);
             SpawnProjectile(gunData.projectile, attackPoint.position, attackPoint.rotation.eulerAngles);
-            
-            
-            //bug IDK why but if I comment 48 line everything works right
+
             CameraShake.Instance.ShakeCamera(data.intensity, data.duration);
             if (!gunData.infiniteAmmo) gunData.currentLoadedAmmo--;
         }
@@ -80,7 +78,6 @@ public class Gun : Weapon
     private IEnumerator ReloadIE()
     {
         isReloading = true;
-        Debug.Log("Reloading...");
 
         yield return new WaitForSeconds(gunData.reloadTime);
 

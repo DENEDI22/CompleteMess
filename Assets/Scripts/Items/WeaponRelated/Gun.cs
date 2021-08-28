@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using SoundSystem;
 using UnityEngine;
 
 public class Gun : Weapon
@@ -7,6 +8,7 @@ public class Gun : Weapon
 
     [HideInInspector] public GunData gunData;
 
+    private SFXPlayer SfxPlayer;
     private bool isReloading;
 
 
@@ -15,7 +17,7 @@ public class Gun : Weapon
         base.Awake();
 
         data.weaponType = WeaponType.Gun;
-
+        SfxPlayer = FindObjectOfType<SFXPlayer>();
         if (data is GunData)
         {
             gunData = (GunData)data;
@@ -39,7 +41,7 @@ public class Gun : Weapon
         if (gunData.currentLoadedAmmo > 0 && !isReloading)
         {
             //AudioManager.instance.Play(gunData.sounds);
-
+            SfxPlayer.PlaySFX(gunData.ShootSound, gunData.SFXAudioMixer);
             // Bullet Spread
             Vector3 deviation = Random.insideUnitCircle.normalized * gunData.spread;
             Vector3 bulletDirection = attackPoint.transform.eulerAngles + deviation;

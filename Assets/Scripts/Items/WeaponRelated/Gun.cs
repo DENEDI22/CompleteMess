@@ -53,6 +53,7 @@ public class Gun : Weapon
             if (gunData.attackMode == AttackMode.Laser)
             {
                 projectile.transform.parent = attackPoint;
+                projectile.GetComponent<LaserProjectile>().damageRate = gunData.damageRate;
             }
 
             if (gunData.muzzleFlash != null) SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.transform.eulerAngles);

@@ -7,9 +7,7 @@ public class BulletProjectile : Projectile
 {
 
     private Rigidbody rb;
-
     public float speed = 100f;
-    public int bounces = 0;
 
     private HashSet<GameObject> damaged = new HashSet<GameObject>();
 

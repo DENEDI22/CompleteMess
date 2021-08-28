@@ -306,7 +306,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504329712}
-  m_LocalRotation: {x: 0.56605226, y: 0.0029813629, z: -0.002047169, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.00298137, z: -0.0020471741, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -414,7 +414,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 250
-  field of view: 93
+  field of view: 40.21876
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -439,7 +439,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511640146}
-  m_LocalRotation: {x: 0.56605226, y: 0.0029813629, z: -0.002047169, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.00298137, z: -0.0020471741, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1254,6 +1254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LazerGun
       objectReference: {fileID: 0}
+    - target: {fileID: 838962256348626430, guid: 945835e43f6e4f24580f40e9e44e461b, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 945835e43f6e4f24580f40e9e44e461b, type: 3}
 --- !u!1 &919132148414940573
@@ -1482,6 +1486,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4994553027615051771, guid: 0beecd1501bfe044f888b2903ae11848, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4994553027615051774, guid: 0beecd1501bfe044f888b2903ae11848, type: 3}
       propertyPath: m_Name
       value: BasicGun
@@ -1584,6 +1592,10 @@ PrefabInstance:
     - target: {fileID: 5280928908899247253, guid: 401c928e6118de748aee2b7ad905a142, type: 3}
       propertyPath: m_Name
       value: ShardsGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280928908899247254, guid: 401c928e6118de748aee2b7ad905a142, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 401c928e6118de748aee2b7ad905a142, type: 3}
@@ -1769,6 +1781,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8791459862651940087, guid: ad14d6da6f428ce479e02633b9466be8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791459862651940089, guid: ad14d6da6f428ce479e02633b9466be8, type: 3}
+      propertyPath: m_Interpolate
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

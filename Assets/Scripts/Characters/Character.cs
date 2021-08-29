@@ -32,6 +32,7 @@ public class Character : MonoBehaviour
     public void Die()
     {
         deathEvent?.Invoke();
+        deathEvent = null;
         Destroy(characterController);
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<PlayerWeaponManagement>().enabled = false;

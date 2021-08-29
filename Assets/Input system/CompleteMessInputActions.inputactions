@@ -297,10 +297,10 @@
                 {
                     "name": "",
                     "id": "ffde5290-7c15-44da-8125-62686579e520",
-                    "path": "",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "Gamepad",
                     "action": "PauseGame",
                     "isComposite": false,
                     "isPartOfComposite": false

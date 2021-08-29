@@ -332,8 +332,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuScripts, Assembly-CSharp
+      - m_Target: {fileID: 6416089424032356072}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:

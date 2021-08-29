@@ -947,7 +947,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784678818}
-  m_LocalRotation: {x: 0.56605226, y: 0.00298137, z: -0.0020471741, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.002981384, z: -0.0020471837, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1313,7 +1313,7 @@ GameObject:
   - component: {fileID: 845549096}
   - component: {fileID: 845549095}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: MainMenu_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1900,7 +1900,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055513409}
-  m_LocalRotation: {x: 0.56605226, y: 0.00298137, z: -0.0020471741, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.002981384, z: -0.0020471837, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2728,7 +2728,7 @@ GameObject:
   - component: {fileID: 1806957567}
   - component: {fileID: 1806957566}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Pause_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2876,7 +2876,7 @@ GameObject:
   - component: {fileID: 1900952980}
   - component: {fileID: 1900952979}
   m_Layer: 5
-  m_Name: Resume
+  m_Name: Resume_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

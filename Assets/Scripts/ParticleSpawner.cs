@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenuParticles : MonoBehaviour
+public class ParticleSpawner : MonoBehaviour
 {
 
     [SerializeField]
@@ -12,10 +12,6 @@ public class MainMenuParticles : MonoBehaviour
     [SerializeField]
     private float spawnRate;
 
-    private void Awake()
-    {
-        spawnRate = 1 / spawnRate;
-    }
 
     private void Start()
     {
@@ -30,7 +26,7 @@ public class MainMenuParticles : MonoBehaviour
 
             Instantiate(particle, transform.position + new Vector3(spawnPosition.x, spawnPosition.y, 0), transform.rotation);
 
-            yield return new WaitForSeconds(spawnRate);
+            yield return new WaitForSeconds(1f / spawnRate);
         }
     }
 

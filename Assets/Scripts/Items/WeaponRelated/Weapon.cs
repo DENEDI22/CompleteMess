@@ -41,6 +41,11 @@ public abstract class Weapon : MonoBehaviour
                 case AttackMode.Continuous:
                     SingleAttack();
                     break;
+
+                case AttackMode.Laser:
+                    SingleAttack();
+                    shouldAttack = false;
+                    break;
             }
 
             timeToAttack = Time.time + 1 / data.attackRate;
@@ -60,4 +65,4 @@ public abstract class Weapon : MonoBehaviour
 
 }
 
-public enum AttackMode { Single, Burst, Continuous }
+public enum AttackMode { Single, Burst, Continuous, Laser }

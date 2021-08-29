@@ -17,7 +17,9 @@ public class Gun : Weapon
         base.Awake();
 
         data.weaponType = WeaponType.Gun;
+
         SfxPlayer = FindObjectOfType<SFXPlayer>();
+
         if (data is GunData)
         {
             gunData = (GunData)data;
@@ -42,12 +44,19 @@ public class Gun : Weapon
         {
             //AudioManager.instance.Play(gunData.sounds);
             SfxPlayer.PlaySFX(gunData.ShootSound, gunData.SFXAudioMixer);
+
             // Bullet Spread
             Vector3 deviation = Random.insideUnitCircle.normalized * gunData.spread;
             Vector3 bulletDirection = attackPoint.transform.eulerAngles + deviation;
 
-            SpawnProjectile(gunData.projectile, attackPoint.position, bulletDirection);
-            SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.transform.eulerAngles);
+            GameObject projectile = SpawnProjectile(gunData.projectile, attackPoint.position, bulletDirection);
+            if (gunData.attackMode == AttackMode.Laser)
+            {
+                projectile.transform.parent = attackPoint;
+                projectile.GetComponent<LaserProjectile>().damageRate = gunData.damageRate;
+            }
+
+            if (gunData.muzzleFlash != null) SpawnMuzzleFlash(gunData.muzzleFlash, attackPoint.position, attackPoint.transform.eulerAngles);
 
             CameraShake.Instance.ShakeCamera(data.intensity, data.duration);
 
@@ -59,10 +68,11 @@ public class Gun : Weapon
         }
     }
 
-    private void SpawnProjectile(GameObject projectile, Vector3 position, Vector3 direction)
+    private GameObject SpawnProjectile(GameObject projectile, Vector3 position, Vector3 direction)
     {
         GameObject p = Instantiate(projectile, position, Quaternion.Euler(direction));
         p.GetComponent<Projectile>().damage = gunData.damage;
+        return p;
     }
 
     private void SpawnMuzzleFlash(GameObject muzzleFlash, Vector3 position, Vector3 rotation)

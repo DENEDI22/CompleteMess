@@ -17,13 +17,13 @@ MonoBehaviour:
   itemType: 0
   weaponType: 0
   damage: 25
-  attackMode: 0
+  damageRate: 1
+  attackMode: 3
   attackRate: 12
   burstAmount: 2
   burstTimeBetweenShots: 0.1
-  intensity: 3.5
-  duration: 0.1
-  sounds: []
+  intensity: 100
+  duration: 1
   ShootSound: {fileID: 8300000, guid: e203ff6e2ecbea143b3e7bd5c12d05a7, type: 3}
   SFXAudioMixer: {fileID: -7081164225037251087, guid: 11b8c5ac638309242bb1561aa15cddce, type: 2}
   infiniteAmmo: 0
@@ -34,5 +34,5 @@ MonoBehaviour:
   currentLoadedAmmo: 0
   currentStoredAmmo: 0
   spread: 0
-  projectile: {fileID: 7349376330728473227, guid: 299da816552bb5c44ae26cadd0c8e0ae, type: 3}
-  muzzleFlash: {fileID: 3710675251221292456, guid: 1c13738fe91191e4b9b15463c515ab15, type: 3}
+  projectile: {fileID: 948646192132172117, guid: 4c5f1f3c66876f34e88e471c2d5630bb, type: 3}
+  muzzleFlash: {fileID: 0}

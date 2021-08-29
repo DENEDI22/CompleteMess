@@ -8,7 +8,8 @@ public class WeaponData : ItemData
     [HideInInspector] public WeaponType weaponType;
 
     [Header("Attack Settings")]
-    [Min(0)] public float damage = 0;
+    [Min(0)] public float damage = 0f;
+    [Min(0)] public float damageRate = 1f;
     public AttackMode attackMode;
     [Min(0f)] public float attackRate = 1f;
     [Min(2)] public int burstAmount = 2;

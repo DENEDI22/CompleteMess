@@ -23,7 +23,8 @@ MonoBehaviour:
   burstTimeBetweenShots: 0.1
   intensity: 3.5
   duration: 0.1
-  sounds: []
+  ShootSound: {fileID: 0}
+  SFXAudioMixer: {fileID: 0}
   infiniteAmmo: 0
   infiniteReload: 0
   maxLoadedAmmo: 10

@@ -21,7 +21,13 @@ public class PlayerPositions : MonoBehaviour
     {
         Color currentPlayerColor = playerColorsQueue.Dequeue();
         _player.transform.position = playerSpawnPointsQueue.Dequeue().position;
-        _player.GetComponentsInChildren<MeshRenderer>().ToList()
-            .ForEach(x => x.materials[1].SetColor("_EmissionColor", currentPlayerColor));
+        foreach (var x in _player.GetComponentsInChildren<MeshRenderer>())
+        {
+            foreach (var y in x.materials.ToList())
+            {
+                y.SetColor("_Color", currentPlayerColor);
+                y.SetColor("_EmissionColor", currentPlayerColor);
+            }
+        }
     }
 }

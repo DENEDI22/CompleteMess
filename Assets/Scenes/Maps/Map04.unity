@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1881818803219458873, guid: c3685d5ce93d72d4e89fbd46c14bb889, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3685d5ce93d72d4e89fbd46c14bb889, type: 3}
 --- !u!1 &218953483
@@ -282,7 +286,7 @@ GameObject:
   - component: {fileID: 266398909}
   m_Layer: 0
   m_Name: GunPlatform1 (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -407,7 +411,7 @@ GameObject:
   - component: {fileID: 362922266}
   m_Layer: 0
   m_Name: GunPlatform1 (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -685,6 +689,10 @@ PrefabInstance:
       value: Prop6 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7158388422054502483, guid: b11293303a15c3646b54cab78ac3687c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158388422054502483, guid: b11293303a15c3646b54cab78ac3687c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
@@ -798,7 +806,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784678818}
-  m_LocalRotation: {x: 0.56605226, y: 0.002981384, z: -0.0020471837, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.00298137, z: -0.0020471741, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1128,6 +1136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop7
       objectReference: {fileID: 0}
+    - target: {fileID: 6126671247650087059, guid: 96a4534df09b0b6469ac63875a56dafc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96a4534df09b0b6469ac63875a56dafc, type: 3}
 --- !u!1 &931867503
@@ -1237,7 +1249,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055513409}
-  m_LocalRotation: {x: 0.56605226, y: 0.002981384, z: -0.0020471837, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.00298137, z: -0.0020471741, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1359,6 +1371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1881818803219458873, guid: c3685d5ce93d72d4e89fbd46c14bb889, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3685d5ce93d72d4e89fbd46c14bb889, type: 3}
 --- !u!1001 &1215125525
@@ -1428,6 +1444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1881818803219458873, guid: c3685d5ce93d72d4e89fbd46c14bb889, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3685d5ce93d72d4e89fbd46c14bb889, type: 3}
 --- !u!1 &1255923703
@@ -1444,7 +1464,7 @@ GameObject:
   - component: {fileID: 1255923704}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1594,6 +1614,10 @@ PrefabInstance:
       value: Prop1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 03ae4c576ff906f4ebbdc31e41175328, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03ae4c576ff906f4ebbdc31e41175328, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
@@ -1604,6 +1628,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 03ae4c576ff906f4ebbdc31e41175328, type: 3}
   m_PrefabInstance: {fileID: 1291204332}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1291204334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 03ae4c576ff906f4ebbdc31e41175328, type: 3}
+  m_PrefabInstance: {fileID: 1291204332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1291204335
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291204334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 03ae4c576ff906f4ebbdc31e41175328, type: 3}
 --- !u!1 &1326724923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,6 +1756,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ff630b1bfff859c45b4f810511a713ee, type: 3}
       propertyPath: m_Name
       value: Prop3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ff630b1bfff859c45b4f810511a713ee, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ff630b1bfff859c45b4f810511a713ee, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1872,6 +1919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1881818803219458873, guid: c3685d5ce93d72d4e89fbd46c14bb889, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3685d5ce93d72d4e89fbd46c14bb889, type: 3}
 --- !u!1001 &1902126693
@@ -1940,6 +1991,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ff630b1bfff859c45b4f810511a713ee, type: 3}
       propertyPath: m_Name
       value: Prop3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ff630b1bfff859c45b4f810511a713ee, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ff630b1bfff859c45b4f810511a713ee, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2016,7 +2071,7 @@ GameObject:
   - component: {fileID: 2092542614}
   m_Layer: 0
   m_Name: GunPlatform1 (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2282,6 +2337,10 @@ PrefabInstance:
       value: Prop6
       objectReference: {fileID: 0}
     - target: {fileID: 7158388422054502483, guid: b11293303a15c3646b54cab78ac3687c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158388422054502483, guid: b11293303a15c3646b54cab78ac3687c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
@@ -2361,7 +2420,7 @@ GameObject:
   - component: {fileID: 6358477289232633759}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2448,7 +2507,7 @@ GameObject:
   - component: {fileID: 6358477289360663315}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2551,7 +2610,7 @@ GameObject:
   - component: {fileID: 6358477289428372767}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2638,7 +2697,7 @@ GameObject:
   - component: {fileID: 6358477289446442105}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2759,6 +2818,10 @@ PrefabInstance:
     - target: {fileID: 9028173305534558024, guid: 855166c2195b0774080e8b07aa19a1b4, type: 3}
       propertyPath: m_Name
       value: Prop1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028173305534558024, guid: 855166c2195b0774080e8b07aa19a1b4, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 9028173305534558024, guid: 855166c2195b0774080e8b07aa19a1b4, type: 3}
       propertyPath: m_StaticEditorFlags

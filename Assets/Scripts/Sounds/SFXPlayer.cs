@@ -6,12 +6,31 @@ using UnityEngine.Audio;
 
 namespace SoundSystem
 {
+
     public class SFXPlayer : MonoBehaviour
     {
+
+        public static SFXPlayer instance;
+
         [SerializeField] private int sfxPlayersPoolSize;
         [SerializeField] private AudioSource referenceAudioPlayer;
         [SerializeField] private Transform sfxPlayersParent;
         private List<AudioSource> _sfxPlayersInstances;
+
+        private void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            DontDestroyOnLoad(gameObject);
+        }
 
         private void Start()
         {
@@ -52,5 +71,7 @@ namespace SoundSystem
             yield return new WaitForSeconds(_SFXDuration);
             _audioSource.SetActive(false);
         }
+
     }
+
 }

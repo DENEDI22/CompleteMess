@@ -4,8 +4,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-
-    public Slider slider;
+    
     public Gradient healthGradient;
     public Image border;
     public Image fill;
@@ -14,21 +13,22 @@ public class HealthBar : MonoBehaviour
     float visibleTime = 3f;
     bool visible = false;
 
+    private float maxHealth, currentHealth;
+    
     private void Awake()
     {
-        border.color = new Color(border.color.r, border.color.g, border.color.b, 0);
         fill.color = new Color(fill.color.r, fill.color.g, fill.color.b, 0);
     }
 
     private void Start()
     {
-        StartCoroutine(ShowHealthBarForTime(visibleTime));
+        ShowHealthBar();
     }
 
     public void SetMaxHealth(float health)
     {
-        slider.maxValue = health;
-        slider.value = health;
+        maxHealth = health;
+        currentHealth = health;
 
         Color fillColor = healthGradient.Evaluate(health);
 
@@ -37,41 +37,16 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealth(float health)
     {
-        slider.value = health;
+        fill.fillAmount = health / maxHealth;
 
-        Color fillColor = healthGradient.Evaluate(slider.normalizedValue);
-        fill.color = new Color(fillColor.r, fillColor.g, fillColor.b, fill.color.a);
-
-        if (!visible)
-        {
-            if (slider.normalizedValue <= showHealthPercentage / 100f)
-            {
-                ShowHealthBar();
-            }
-            else
-            {
-                StartCoroutine(ShowHealthBarForTime(visibleTime));
-            }
-        }
+        Color fillColor = healthGradient.Evaluate(fill.fillAmount);
+        fill.color = fillColor;
     }
 
     void ShowHealthBar()
     {
         StartCoroutine(FadeImage(border, 0.5f, true));
         StartCoroutine(FadeImage(fill, 0.5f, true));
-    }
-
-    void HideHealthBar()
-    {
-        StartCoroutine(FadeImage(border, 1f, false));
-        StartCoroutine(FadeImage(fill, 1f, false));
-    }
-
-    IEnumerator ShowHealthBarForTime(float time)
-    {
-        ShowHealthBar();
-        yield return new WaitForSeconds(time);
-        HideHealthBar();
     }
 
     IEnumerator FadeImage(Image image, float time, bool fadeIn)

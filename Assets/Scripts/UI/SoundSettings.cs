@@ -11,12 +11,14 @@ public class SoundSettings : MonoBehaviour
     public void SaveSFXVolume(float _newVolume)
     {
         PlayerPrefs.SetFloat("SFXVolume", _newVolume);
+        audioMixer.SetFloat("SFXVolume", _newVolume);
         PlayerPrefs.Save();
     }
 
     public void SaveMusicVolume(float _newVolume)
     {
         PlayerPrefs.SetFloat("MusicVolume", _newVolume);
+        audioMixer.SetFloat("MusicVolume", _newVolume);
         PlayerPrefs.Save();
     }
 

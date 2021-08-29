@@ -1,17 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using SoundSystem;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class Gun : Weapon
 {
 
+    public UnityEvent OnSingleAttack;
+    
     [HideInInspector] public GunData gunData;
 
     private SFXPlayer SfxPlayer;
     private bool isReloading;
-
-
+    
     private new void Awake()
     {
         base.Awake();
@@ -44,6 +49,8 @@ public class Gun : Weapon
         {
             //AudioManager.instance.Play(gunData.sounds);
             SfxPlayer.PlaySFX(gunData.ShootSound, gunData.SFXAudioMixer);
+            
+            OnSingleAttack.Invoke();
 
             // Bullet Spread
             Vector3 deviation = Random.insideUnitCircle.normalized * gunData.spread;

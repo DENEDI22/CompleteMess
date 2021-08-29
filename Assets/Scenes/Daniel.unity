@@ -306,7 +306,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504329712}
-  m_LocalRotation: {x: 0.56605226, y: 0.00298137, z: -0.0020471741, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.002981384, z: -0.0020471837, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -439,7 +439,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511640146}
-  m_LocalRotation: {x: 0.56605226, y: 0.00298137, z: -0.0020471741, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.002981384, z: -0.0020471837, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -775,7 +775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxPlayersPoolSize: 20
   referenceAudioPlayer: {fileID: 38797587235169205, guid: 7139f5b40b3cf1b4984e36f2dedaff13, type: 3}
-  sfxPlayersParent: {fileID: 511640150}
+  sfxPlayersParent: {fileID: 837114913}
 --- !u!1 &1041057175
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class LookAtCamera : MonoBehaviour
         }
         catch (Exception e)
         {
-            throw;
+            
         }
     }
 }

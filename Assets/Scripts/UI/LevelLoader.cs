@@ -55,6 +55,12 @@ public class LevelLoader : MonoBehaviour
         transition.SetBool("Start", false);
     }
 
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+        StartCoroutine(Load(0));
+    }
+
     public void Quit()
     {
         Application.Quit();

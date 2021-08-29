@@ -6,8 +6,8 @@ using UnityEngine.Audio;
 public class SoundSettings : MonoBehaviour
 {
     [SerializeField] private AudioMixer audioMixer;
-    
-    
+
+
     public void SaveSFXVolume(float _newVolume)
     {
         PlayerPrefs.SetFloat("SFXVolume", _newVolume);
@@ -17,8 +17,9 @@ public class SoundSettings : MonoBehaviour
 
     public void SaveMusicVolume(float _newVolume)
     {
-        PlayerPrefs.SetFloat("MusicVolume", _newVolume);
-        audioMixer.SetFloat("MusicVolume", _newVolume);
+        float correctedVolume = Mathf.Log10(_newVolume) * 20;
+        PlayerPrefs.SetFloat("MusicVolume", correctedVolume);
+        audioMixer.SetFloat("MusicVolume", correctedVolume);
         PlayerPrefs.Save();
     }
 
@@ -35,7 +36,7 @@ public class SoundSettings : MonoBehaviour
             PlayerPrefs.SetFloat("MusicVolume", 0f);
             PlayerPrefs.Save();
         }
-        
+
         LoadSoundSettings();
     }
 

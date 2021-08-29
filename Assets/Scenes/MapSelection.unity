@@ -831,7 +831,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &582111245
+--- !u!1 &607374649
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -839,9 +839,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 582111248}
-  - component: {fileID: 582111247}
-  - component: {fileID: 582111246}
+  - component: {fileID: 607374652}
+  - component: {fileID: 607374651}
+  - component: {fileID: 607374650}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -849,41 +849,41 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &582111246
+--- !u!114 &607374650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582111245}
+  m_GameObject: {fileID: 607374649}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8983bb00e9f64ee0bdb508ae594d3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 11b8c5ac638309242bb1561aa15cddce, type: 2}
---- !u!114 &582111247
+--- !u!114 &607374651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582111245}
+  m_GameObject: {fileID: 607374649}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5705d3f6c6086944963d74f41c6ce85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sfxPlayersPoolSize: 20
-  referenceAudioPlayer: {fileID: 0}
-  sfxPlayersParent: {fileID: 582111248}
---- !u!4 &582111248
+  referenceAudioPlayer: {fileID: 38797587235169205, guid: 7139f5b40b3cf1b4984e36f2dedaff13, type: 3}
+  sfxPlayersParent: {fileID: 607374652}
+--- !u!4 &607374652
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582111245}
+  m_GameObject: {fileID: 607374649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}

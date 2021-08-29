@@ -2155,7 +2155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxPlayersPoolSize: 20
-  referenceAudioPlayer: {fileID: 0}
+  referenceAudioPlayer: {fileID: 38797587235169205, guid: 7139f5b40b3cf1b4984e36f2dedaff13, type: 3}
   sfxPlayersParent: {fileID: 1186858105}
 --- !u!114 &1186858107
 MonoBehaviour:

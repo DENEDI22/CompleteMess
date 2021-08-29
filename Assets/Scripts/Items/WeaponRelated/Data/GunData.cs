@@ -9,8 +9,8 @@ public class GunData : WeaponData
     [Header("Ammo Settings")]
     public bool infiniteAmmo;
     public bool infiniteReload;
-    [Min(1)] public int maxLoadedAmmo;
-    [Min(1)] public int maxStoredAmmo;
+    [Min(0)] public int maxLoadedAmmo;
+    [Min(0)] public int maxStoredAmmo;
     [Min(0)] public float reloadTime;
     [HideInInspector] public int currentLoadedAmmo;
     [HideInInspector] public int currentStoredAmmo;

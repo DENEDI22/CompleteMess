@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 688843853}
+      - m_Target: {fileID: 688843855}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1
@@ -807,22 +807,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1229748018, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416089424426994012, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416089424548327328, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
+    - target: {fileID: 688843855, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
       propertyPath: transition
       value: 
       objectReference: {fileID: 688843850}
-    - target: {fileID: 6416089424548327328, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
-      propertyPath: transitionTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6416089424548327329, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -871,57 +859,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1229748020, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
 --- !u!95 &688843850 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6416089424426993959, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
   m_PrefabInstance: {fileID: 688843849}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &688843851 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1229748018, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
-  m_PrefabInstance: {fileID: 688843849}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &688843852
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688843851}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 358de29e8c31221498cb014f2e638c6b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &688843853 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6416089424548327330, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
-  m_PrefabInstance: {fileID: 688843849}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &688843854
+--- !u!114 &688843855 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 688843855, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
+  m_PrefabInstance: {fileID: 688843849}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688843853}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 160cb4fb0f3929c41a7f8e83a2f15242, type: 3}
+  m_Script: {fileID: 11500000, guid: 32d725fb956c99d4ca3276fd4cf3010b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDownText: {fileID: 0}
-  GameOverScreen: {fileID: 0}
 --- !u!1 &784678818
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +905,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784678818}
-  m_LocalRotation: {x: 0.56605226, y: 0.002981384, z: -0.0020471837, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.0029813838, z: -0.0020471837, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1622,7 +1577,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055513409}
-  m_LocalRotation: {x: 0.56605226, y: 0.0029813696, z: -0.002047174, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.0029813838, z: -0.0020471837, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2020,7 +1975,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 688843853}
+      - m_Target: {fileID: 688843855}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1

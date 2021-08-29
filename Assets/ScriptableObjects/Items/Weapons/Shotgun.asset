@@ -16,7 +16,8 @@ MonoBehaviour:
   description: Description.
   itemType: 0
   weaponType: 0
-  damage: 25
+  damage: 15
+  damageRate: 1
   attackMode: 1
   attackRate: 0.75
   burstAmount: 3
@@ -27,8 +28,8 @@ MonoBehaviour:
   SFXAudioMixer: {fileID: -7081164225037251087, guid: 11b8c5ac638309242bb1561aa15cddce, type: 2}
   infiniteAmmo: 0
   infiniteReload: 0
-  maxLoadedAmmo: 6
-  maxStoredAmmo: 12
+  maxLoadedAmmo: 15
+  maxStoredAmmo: 0
   reloadTime: 1.25
   currentLoadedAmmo: 0
   currentStoredAmmo: 0

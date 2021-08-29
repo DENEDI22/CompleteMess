@@ -131,10 +131,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 145347151}
-  - component: {fileID: 145347154}
-  - component: {fileID: 145347153}
-  - component: {fileID: 145347152}
+  - component: {fileID: 231384096}
   m_Layer: 5
   m_Name: MainMenu_Button
   m_TagString: Untagged
@@ -595,7 +592,7 @@ GameObject:
   - component: {fileID: 483378692}
   - component: {fileID: 483378690}
   m_Layer: 5
-  m_Name: Resume_Button
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -968,7 +965,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784678818}
-  m_LocalRotation: {x: 0.56605226, y: 0.0029813696, z: -0.002047174, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.0029813838, z: -0.0020471837, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1492,7 +1489,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1697599504}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1
@@ -1599,7 +1596,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055513409}
-  m_LocalRotation: {x: 0.56605226, y: 0.0029813696, z: -0.002047174, w: 0.82436144}
+  m_LocalRotation: {x: 0.56605226, y: 0.0029813838, z: -0.0020471837, w: 0.82436144}
   m_LocalPosition: {x: -0.08, y: 28.740004, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2484,7 +2481,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1697599504}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1
@@ -2968,6 +2965,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 688843855, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 1697599501}
     - target: {fileID: 1229748018, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3064,6 +3065,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1697599504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 688843855, guid: bda65fc8d157e8644aa471d3f76b163b, type: 3}
+  m_PrefabInstance: {fileID: 1697599500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d725fb956c99d4ca3276fd4cf3010b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1806947057
 GameObject:
   m_ObjectHideFlags: 0

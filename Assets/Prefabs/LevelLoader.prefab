@@ -146,14 +146,14 @@ GameObject:
   - component: {fileID: 1229748023}
   - component: {fileID: 1229748022}
   - component: {fileID: 1229748021}
-  - component: {fileID: 1229748020}
+  - component: {fileID: 688843852}
   m_Layer: 0
   m_Name: Curtainfade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1229748019
 RectTransform:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!95 &1229748020
+--- !u!95 &688843852
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ Animator:
   m_GameObject: {fileID: 1229748018}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ea5ccf4157e2c224a926a86c5d3d6690, type: 2}
+  m_Controller: {fileID: 9100000, guid: 358de29e8c31221498cb014f2e638c6b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -622,7 +622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6416089424426994011
 RectTransform:
   m_ObjectHideFlags: 0
@@ -820,7 +820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6416089424548327329}
-  - component: {fileID: 6416089424548327328}
+  - component: {fileID: 688843855}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -844,7 +844,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6416089424548327328
+--- !u!114 &688843855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -856,5 +856,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d725fb956c99d4ca3276fd4cf3010b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 6416089424426993959}
+  transition: {fileID: 0}
   transitionTime: 1
